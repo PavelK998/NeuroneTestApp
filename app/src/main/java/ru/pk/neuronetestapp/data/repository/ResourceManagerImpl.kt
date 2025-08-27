@@ -1,0 +1,14 @@
+package ru.pk.neuronetestapp.data.repository
+
+import android.content.Context
+import dagger.hilt.android.qualifiers.ApplicationContext
+import ru.pk.neuronetestapp.domain.ResourceManager
+import javax.inject.Inject
+
+class ResourceManagerImpl @Inject constructor(
+    @param:ApplicationContext private val context: Context
+): ResourceManager {
+    override fun getString(resourceId: Int): String {
+        return context.getString(resourceId)
+    }
+}
