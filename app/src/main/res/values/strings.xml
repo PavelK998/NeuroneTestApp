@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Neurone Test App</string>
+
+    //mock data
+    <string name="mock_language">English</string>
+    <string name="mock_email_error">Need to confirm</string>
+
+    //core
+    <string name="back_btn_text">Back</string>
+    <string name="email">E-mail</string>
+    //profile screen
+    <string name="purchases">MY PURCHASES</string>
+    <string name="settings">SETTINGS</string>
+    <string name="biometry_entry">Log in using biometrics</string>
+    <string name="change_code">Change the 4-digit code</string>
+    <string name="registration_for_bank_clients">Registration for bank clients</string>
+    <string name="language">Language</string>
 </resources>
