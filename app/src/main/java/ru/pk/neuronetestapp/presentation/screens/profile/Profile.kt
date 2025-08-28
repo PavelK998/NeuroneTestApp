@@ -29,6 +29,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import ru.pk.neuronetestapp.R
 import ru.pk.neuronetestapp.presentation.components.BackButton
 import ru.pk.neuronetestapp.presentation.components.ClickableImageOrTextButton
+import ru.pk.neuronetestapp.presentation.components.ClickableTextButtonWithSwitch
 import ru.pk.neuronetestapp.ui.theme.NeuroneTestAppTheme
 import ru.pk.neuronetestapp.ui.theme.additionallyText
 import ru.pk.neuronetestapp.ui.theme.background
@@ -44,18 +45,23 @@ fun ProfileScreenRoot(
     ProfileScreen(
         uiState = uiState,
         handleIntent = { intent ->
-            when(intent) {
+            when (intent) {
                 is ProfileIntent.OnPurchasesClick -> {
                     onPurchasesClick()
                 }
+
                 is ProfileIntent.OnRegisterBankClientClick -> {
                     onRegisterBankClientClick()
                 }
-            }
 
+                else -> {
+                    viewModel.handleIntent(intent)
+                }
+            }
         }
     )
 }
+
 @Composable
 fun ProfileScreen(
     uiState: ProfileUiState,
@@ -140,30 +146,37 @@ fun ProfileScreen(
             errorText = uiState.emailError,
             omClick = {}
         )
-        ClickableImageOrTextButton(
+        ClickableTextButtonWithSwitch(
             modifier = Modifier.padding(top = 8.dp),
             text = stringResource(R.string.biometry_entry),
-            omClick = {}
+            omClick = {},
+            isSwitchChecked = uiState.isBiometryEnabled,
+            onSwitchClick = {
+                handleIntent(ProfileIntent.OnBiometryEnableBtnClick(it))
+            }
         )
+
         ClickableImageOrTextButton(
             modifier = Modifier.padding(top = 8.dp),
             text = stringResource(R.string.change_code),
             omClick = {}
         )
+
         ClickableImageOrTextButton(
             modifier = Modifier.padding(top = 8.dp),
             text = stringResource(R.string.registration_for_bank_clients),
             omClick = {
                 handleIntent(ProfileIntent.OnRegisterBankClientClick)
             }
+
         )
+
         ClickableImageOrTextButton(
             modifier = Modifier.padding(top = 8.dp, bottom = 24.dp),
             text = stringResource(R.string.language),
             trailingText = uiState.language,
             omClick = {}
         )
-
     }
 }
 

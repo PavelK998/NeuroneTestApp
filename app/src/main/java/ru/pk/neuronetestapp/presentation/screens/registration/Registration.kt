@@ -225,7 +225,9 @@ private fun TextInputBlock(
                 .padding(top = 16.dp),
             value = uiState.firstName,
             onValueChange = {
-                handleIntent(RegistrationIntent.OnFirstNameTextChange(it))
+                handleIntent(RegistrationIntent.OnFirstNameTextChange(
+                    it.filter { char -> !char.isDigit() })
+                )
             },
             placeholderText = stringResource(R.string.first_name),
             focusRequester = uiState.listOfFocusRequesters[2],
@@ -246,7 +248,9 @@ private fun TextInputBlock(
                 .padding(top = 16.dp),
             value = uiState.lastName,
             onValueChange = {
-                handleIntent(RegistrationIntent.OnLastNameTextChange(it))
+                handleIntent(RegistrationIntent.OnLastNameTextChange(
+                    it.filter { char -> !char.isDigit() })
+                )
             },
             placeholderText = stringResource(R.string.last_name),
             focusRequester = uiState.listOfFocusRequesters[3],
