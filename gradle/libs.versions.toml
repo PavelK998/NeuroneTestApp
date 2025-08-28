@@ -12,8 +12,14 @@ hilt = "2.57.1"
 hiltNavigationCompose = "1.2.0"
 composeNavigation = "2.9.3"
 serialization = "1.9.0"
+datastorePrefs = "1.1.7"
+googleGson = "2.13.1"
 
 [libraries]
+
+google-gson = { module = "com.google.code.gson:gson", version.ref = "googleGson" }
+
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePrefs" }
 
 dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 dagger-hilt-kapt = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }

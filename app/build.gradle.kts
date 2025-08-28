@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "ru.pk.neuronetestapp"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -43,10 +43,16 @@ android {
 }
 
 dependencies {
+    //gson
+    implementation(libs.google.gson)
+
+    //data store preferences
+    implementation(libs.androidx.datastore.preferences)
 
     //navigation
     implementation(libs.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
+
     //hilt
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hilt.kapt)
