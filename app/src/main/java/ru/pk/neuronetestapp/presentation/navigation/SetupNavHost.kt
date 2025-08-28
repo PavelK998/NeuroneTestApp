@@ -7,6 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import ru.pk.neuronetestapp.presentation.screens.profile.ProfileScreenRoot
 import ru.pk.neuronetestapp.presentation.screens.profile.ProfileViewModel
+import ru.pk.neuronetestapp.presentation.screens.purchases.PurchasesScreenRoot
+import ru.pk.neuronetestapp.presentation.screens.purchases.PurchasesViewModel
 import ru.pk.neuronetestapp.presentation.screens.registration.RegistrationScreenRoot
 import ru.pk.neuronetestapp.presentation.screens.registration.RegistrationViewModel
 
@@ -40,7 +42,13 @@ fun SetupNavHost(navController: NavHostController) {
         }
 
         composable<Destination.PurchasesScreen> {
-
+            val purchasesViewModel = hiltViewModel<PurchasesViewModel>()
+            PurchasesScreenRoot(
+                viewModel = purchasesViewModel,
+                onBackClick = {
+                    navController.navigateUp()
+                }
+            )
         }
     }
 }

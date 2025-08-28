@@ -9,6 +9,7 @@
     //core
     <string name="back_btn_text">Назад</string>
     <string name="email">E-mail</string>
+
     //profile screen
     <string name="purchases">МОИ ПОКУПКИ</string>
     <string name="settings">НАСТРОЙКИ</string>
@@ -16,6 +17,7 @@
     <string name="change_code">Сменить 4-х значный код</string>
     <string name="registration_for_bank_clients">Регистрация для клиентов банка</string>
     <string name="language">Язык</string>
+
     //registration screen
     <string name="registration">Регистрация для клиентов банка</string>
     <string name="participants_number">Номер участника</string>
@@ -30,4 +32,7 @@
     <string name="confirm_terms_clickable_part">с условиями участия</string>
     <string name="btn_continue">Продолжить</string>
     <string name="incorrect_data">Некорректные данные</string>
+
+    //purchases screen
+    <string name="your_purchases">Ваши покупки</string>
 </resources>
