@@ -6,8 +6,10 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import ru.pk.neuronetestapp.data.manager.DeviceManagerImpl
 import ru.pk.neuronetestapp.data.manager.ResourceManagerImpl
+import ru.pk.neuronetestapp.data.repository.NetworkRepositoryImpl
 import ru.pk.neuronetestapp.domain.manager.DeviceManager
 import ru.pk.neuronetestapp.domain.manager.ResourceManager
+import ru.pk.neuronetestapp.domain.repository.NetworkRepository
 import javax.inject.Singleton
 
 @Module
@@ -20,4 +22,8 @@ abstract class BindRepository {
     @Binds
     @Singleton
     abstract fun bindDeviceManager(deviceManagerImpl: DeviceManagerImpl): DeviceManager
+
+    @Binds
+    @Singleton
+    abstract fun bindNetworkRepository(networkRepositoryImpl: NetworkRepositoryImpl): NetworkRepository
 }

@@ -9,6 +9,7 @@
     //core
     <string name="back_btn_text">Back</string>
     <string name="email">E-mail</string>
+
     //profile screen
     <string name="purchases">MY PURCHASES</string>
     <string name="settings">SETTINGS</string>
@@ -16,6 +17,7 @@
     <string name="change_code">Change the 4-digit code</string>
     <string name="registration_for_bank_clients">Registration for bank clients</string>
     <string name="language">Language</string>
+
     //registration screen
     <string name="registration">Registration for bank clients</string>
     <string name="participants_number">Participant\'s number</string>
@@ -30,4 +32,7 @@
     <string name="confirm_terms_clickable_part">the terms of participation</string>
     <string name="btn_continue">Continue</string>
     <string name="incorrect_data">Incorrect data</string>
+
+    //purchases screen
+    <string name="your_purchases">Your purchases</string>
 </resources>

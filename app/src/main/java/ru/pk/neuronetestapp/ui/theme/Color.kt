@@ -13,6 +13,8 @@ val Pink40 = Color(0xFF7D5260)
 val button = Color(0xFF3c3756)
 
 val clickableImageOrTextButton = Color(0xFF252138)
+
+val innerCardInPurchaseCard = Color(0xFF372F53)
 val clickableImageOrTextButtonArrow = Color(0xFFdfdfe0)
 
 val background = Color(0xFF2a2545)

@@ -117,7 +117,7 @@ fun RegistrationScreen(
                 modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
                 annotatedString = uiState.termsOfUseText,
                 onClick = {
-
+                    handleIntent(RegistrationIntent.OnTermsOfUseCLick)
                 }
             )
             Button(
