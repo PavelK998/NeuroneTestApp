@@ -17,5 +17,7 @@ val clickableImageOrTextButtonArrow = Color(0xFFdfdfe0)
 
 val background = Color(0xFF2a2545)
 val onBackground = Color(0xFFFFFFFF)
-
 val additionallyText = Color(0xFF8f8da4)
+val registrationButton = Color(0xFFff3c57)
+
+val registrationNotActiveButton = Color(0xFFab3452)

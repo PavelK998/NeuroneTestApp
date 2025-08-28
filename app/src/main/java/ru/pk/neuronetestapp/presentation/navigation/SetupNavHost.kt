@@ -5,8 +5,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import ru.pk.neuronetestapp.presentation.screens.ProfileScreenRoot
-import ru.pk.neuronetestapp.presentation.screens.ProfileViewModel
+import ru.pk.neuronetestapp.presentation.screens.profile.ProfileScreenRoot
+import ru.pk.neuronetestapp.presentation.screens.profile.ProfileViewModel
+import ru.pk.neuronetestapp.presentation.screens.registration.RegistrationScreenRoot
+import ru.pk.neuronetestapp.presentation.screens.registration.RegistrationViewModel
 
 @Composable
 fun SetupNavHost(navController: NavHostController) {
@@ -28,7 +30,13 @@ fun SetupNavHost(navController: NavHostController) {
         }
 
         composable<Destination.RegisterScreen> {
-
+            val registerViewModel = hiltViewModel<RegistrationViewModel>()
+            RegistrationScreenRoot(
+                viewModel = registerViewModel,
+                onBackButtonClick = {
+                    navController.navigateUp()
+                }
+            )
         }
 
         composable<Destination.PurchasesScreen> {

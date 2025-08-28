@@ -4,6 +4,7 @@
     //mock data
     <string name="mock_language">English</string>
     <string name="mock_email_error">Need to confirm</string>
+    <string name="mock_terms_of_use_click_result">The terms of use of the application will be shown here</string>
 
     //core
     <string name="back_btn_text">Back</string>
@@ -15,4 +16,18 @@
     <string name="change_code">Change the 4-digit code</string>
     <string name="registration_for_bank_clients">Registration for bank clients</string>
     <string name="language">Language</string>
+    //registration screen
+    <string name="registration">Registration for bank clients</string>
+    <string name="participants_number">Participant\'s number</string>
+    <string name="hint_sixteen_digits_number">The 16-digit number that you received from the bank</string>
+    <string name="code">Code</string>
+    <string name="hint_code_from_bank">The code that you received from the bank</string>
+    <string name="first_name">First name</string>
+    <string name="hint_first_name">First name (as in the passport)</string>
+    <string name="last_name">Last name</string>
+    <string name="hint_last_name">Last name (as in the passport)</string>
+    <string name="confirm_terms">By clicking continue,\n you agree to the terms of participation</string>
+    <string name="confirm_terms_clickable_part">the terms of participation</string>
+    <string name="btn_continue">Continue</string>
+    <string name="incorrect_data">Incorrect data</string>
 </resources>

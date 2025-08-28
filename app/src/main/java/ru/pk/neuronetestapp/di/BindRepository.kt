@@ -4,8 +4,10 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import ru.pk.neuronetestapp.data.repository.ResourceManagerImpl
-import ru.pk.neuronetestapp.domain.ResourceManager
+import ru.pk.neuronetestapp.data.manager.DeviceManagerImpl
+import ru.pk.neuronetestapp.data.manager.ResourceManagerImpl
+import ru.pk.neuronetestapp.domain.manager.DeviceManager
+import ru.pk.neuronetestapp.domain.manager.ResourceManager
 import javax.inject.Singleton
 
 @Module
@@ -13,5 +15,9 @@ import javax.inject.Singleton
 abstract class BindRepository {
     @Binds
     @Singleton
-    abstract fun bindResourceManager(deviceManagerImpl: ResourceManagerImpl): ResourceManager
+    abstract fun bindResourceManager(resourceManagerImpl: ResourceManagerImpl): ResourceManager
+
+    @Binds
+    @Singleton
+    abstract fun bindDeviceManager(deviceManagerImpl: DeviceManagerImpl): DeviceManager
 }

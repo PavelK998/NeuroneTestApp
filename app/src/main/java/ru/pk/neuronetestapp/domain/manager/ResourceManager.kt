@@ -1,4 +1,4 @@
-package ru.pk.neuronetestapp.domain
+package ru.pk.neuronetestapp.domain.manager
 
 interface ResourceManager {
     fun getString(resourceId: Int): String
