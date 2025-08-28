@@ -1,4 +1,4 @@
-package ru.pk.neuronetestapp.presentation.screens
+package ru.pk.neuronetestapp.presentation.screens.profile
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column

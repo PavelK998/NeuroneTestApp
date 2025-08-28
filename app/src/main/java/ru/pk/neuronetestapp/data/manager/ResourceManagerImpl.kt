@@ -1,8 +1,8 @@
-package ru.pk.neuronetestapp.data.repository
+package ru.pk.neuronetestapp.data.manager
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
-import ru.pk.neuronetestapp.domain.ResourceManager
+import ru.pk.neuronetestapp.domain.manager.ResourceManager
 import javax.inject.Inject
 
 class ResourceManagerImpl @Inject constructor(

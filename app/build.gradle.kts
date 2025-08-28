@@ -44,6 +44,9 @@ android {
 
 dependencies {
 
+    //data store preferences
+    implementation(libs.androidx.datastore.preferences)
+
     //navigation
     implementation(libs.navigation.compose)
     implementation(libs.kotlinx.serialization.json)

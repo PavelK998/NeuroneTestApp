@@ -12,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NeuroneTestApp">
         <activity
+            android:windowSoftInputMode="adjustResize"
             android:name=".presentation.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.NeuroneTestApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
