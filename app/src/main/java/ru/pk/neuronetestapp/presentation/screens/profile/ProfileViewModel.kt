@@ -38,6 +38,26 @@ class ProfileViewModel @Inject constructor(
             initialValue = ProfileUiState()
         )
 
+    fun handleIntent(intent: ProfileIntent) {
+        when (intent) {
+            is ProfileIntent.OnBiometryEnableBtnClick -> {
+                _uiState.update {
+                    it.copy(
+                        isBiometryEnabled = intent.isEnabled
+                    )
+                }
+            }
+
+            is ProfileIntent.OnPurchasesClick -> {
+
+            }
+
+            is ProfileIntent.OnRegisterBankClientClick -> {
+
+            }
+        }
+    }
+
     private fun getUserData() = viewModelScope.execute(
         source = {
             deviceManager.getUserData()
